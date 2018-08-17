@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Alfreita/projeto_f/issues"
   },
-  "homepage": "https://github.com/Alfreita/projeto_f#readme"
+  "homepage": "https://github.com/Alfreita/projeto_f#readme",
+  "dependencies": {
+    "expressa": "^0.4.1"
+  }
 }
