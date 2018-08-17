@@ -4,7 +4,7 @@ var ip = "localhost";
 
 var server = http.createServer(function(req, res) { // req serve para pegar a requisição e o res para a resposta ou seja callback
     console.log("Recebendo request");
-    res.writeHead(    200, {'Content-Type': 'text/html'});
+    res.writeHead( "html/index.html");
     res.end('<html><body>Request recebido!</body></html>');
 });
 
