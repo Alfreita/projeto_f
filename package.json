@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Alfreita/projeto_f#readme",
   "dependencies": {
-    "expressa": "^0.4.1"
+    "expressa": "^0.4.1",
+    "mongodb": "^3.1.3"
   }
 }
