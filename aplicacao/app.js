@@ -1,5 +1,4 @@
-var express = require('express'); // requisição da dependencia express
-var app = express();
+var app = require ('./config/express')();
 
 app.set('view engine','ejs');
 
