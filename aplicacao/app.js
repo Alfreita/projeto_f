@@ -1,5 +1,4 @@
 var app = require ('./config/express')();
-
 app.get('/index', function(req,res){ // requisição e resposta
   console.log("Atendendo requisicao");
   res.render("html/index");
