@@ -4,7 +4,7 @@ module.exports = function(app){
 
         db.findCustomers((err,docs) =>{
             if (err) res.status(500).json(err)
-            else res.json(docs)
+            else res.render("html/produtos",{produtos:docs});
         })
 
     });
