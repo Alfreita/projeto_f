@@ -1,5 +1,7 @@
 instalar a dependendia nodemon
 npm install -g nodemon 
+npm install Express serve para pegar rota
+npm install Express-load
 
 Express serve para tratar as requisições
 ejs é como se fosse um html mas nao é EMBEDED JAVA SCRIPT(EJS)
