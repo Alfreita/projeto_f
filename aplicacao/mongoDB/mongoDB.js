@@ -9,3 +9,9 @@ function findCustomers (callback){
 }
 
 module.exports = {findCustomers}
+
+function insertCustomer(customer, callback){
+    global.conn.collection('customers').insert(customer, callback)
+    }
+    module.exports = {findCustomers,insertCustomer}
+    
