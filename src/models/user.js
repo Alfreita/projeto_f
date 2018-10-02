@@ -49,13 +49,22 @@ const Schema = new Schema({
                 type:String
             },
 			rua:{
-                
+                type:String,
+                require:true
+            },
+			bairro:{
+                type:String,
+                require:true
+            },
+			numero:{
+                type:Number,
+                require:true
+            },
+			complemento:{
+                type:String,
             }
-					"bairro":,
-					"numero":,
-					"complemento"
-				},
-	"cartoes": [ {
+		},
+	cartoes: [ {
 				"bandeira":,
 				"nomeNoCartao":,
 				"numero":,
