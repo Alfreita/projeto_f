@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const Schema = new Schema({
@@ -65,33 +65,19 @@ const Schema = new Schema({
             }
 		},
 	cartoes: [ {
-				"bandeira":,
-				"nomeNoCartao":,
-				"numero":,
-				"dataValidade":
+				bandeira:String,
+				nomeNoCartao:String,
+				numero:Number,
+				dataValidade:String
 				} ],
 
-	"carrinhoDeCompras": {  "produtos": [],
-							"valorTotal":
+	carrinhoDeCompras: {  produtos: [],
+							valorTotal:String
 						 },
-	"compras": [ { "produtos": [],
-					"valorTotal":,
-					"qtdParcelas":,
-					"numeroPedido":,
-					"valorFrete"
+	compras: [ { produtos: [],
+					valorTotal:String,
+					qtdParcelas:Number,
+					numeroPedido:Number,
+					valorFrete:String
 				} ],
-}
-
-pedido {
-	"numeroPedido":,
-	"enderecoEntrega": { "cep":,
-					     "cidade":,
-					     "rua":,
-					     "bairro":,
-					     "numero":,
-					     "complemento"
-						},
-	"produtos": []					
-
-}
 });
