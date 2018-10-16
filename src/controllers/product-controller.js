@@ -5,10 +5,11 @@ const Product = mongoose.model('Product');
 const ValidationContract = require('../validators/fluent-validator');
 
 exports.post = (req, res, next) => {
-    let contract  = new ValidationContract();
+   /* let contract  = new ValidationContract();
     contract.hasMinLen(req.body.title,3,'o titulo deve conter pelo menos 3 caracteres');
     contract.hasMinLen(req.body.slug,3,'o titulo deve conter pelo menos 3 caracteres');
-    contract.hasMinLen(req.body.description,3,'o titulo deve conter pelo menos 3 caracteres');
+    contract.hasMinLen(req.body.description,3,'o titulo deve conter pelo menos 3 caracteres');*/
+    //não deve ser utilizado//
 
     //verifica se os dados passados pela requisição são validos
     if(!contract.isValid()){
