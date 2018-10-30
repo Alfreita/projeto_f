@@ -349,8 +349,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#82B7DF;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
-/*.overlay.dark::after{color:inherit; background-color:rgba(37,100,146,.85)/* #256492 */;}
-/*.overlay.light::after{background-color:rgba(130,183,223,.65)/* #82B7DF */;}
+/*.overlay.dark::after{color:inherit; background-color:rgba(37,100,146,.85)/* #256492  ;}*/
+/*.overlay.light::after{background-color:rgba(130,183,223,.65)/* #82B7DF :}*/
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#82B7DF; border-color:#82B7DF;}
 .btn:hover, .btn.inverse{color:inherit; background-color:rgba(0, 0, 0, 0.61); border-color:inherit;}

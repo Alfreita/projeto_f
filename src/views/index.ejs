@@ -23,7 +23,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
    <nav id="mainav">
       <ul class="clear">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li class="active"><a href="index">Home</a></li>
         <li><a class="drop" href="#">Pages</a>
           <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
@@ -98,18 +98,22 @@ Licence URI: https://www.os-templates.com/template-terms
   <section id="services" class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="center btmspace-80">
-      <h6 class="heading underline font-x2">Orci mauris pede erat</h6>
+      <h6 class="heading underline font-x2">Jogos da Semana</h6>
     </div>
     <ul class="nospace group">
+      <% for(var i=0;i<lista.length;i++){ %>
       <li class="one_third">
         <article><a href="#"><i class="fab fa-fort-awesome"></i></a>
-          <h6 class="heading">Fringilla</h6>
-          <p>Tempus eget mattis et risus nulla ligula in quam sed lobortis rutrum purus pellentesque dictum augue in quam.</p>
+          <img class="borderedbox inspace-10" src= <%= lista[i].url %> alt="">
+          <h6 class="heading"> <%=lista[i].title %> </h6>
+          <p><%=lista[i].description %> </p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
         </article>
+        <% } %>
       </li>
-      <li class="one_third">
+      <!--<li class="one_third">
         <article><a href="#"><i class="fab fa-deviantart"></i></a>
+          <img class="borderedbox inspace-10" src="images/demo/480x300.png" alt="">
           <h6 class="heading">Tristique</h6>
           <p>Nunc rhoncus nisi eu est nulla dolor donec ut dolor aliquam eget nunc etiam consequat enim vel nisl donec.</p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
@@ -117,6 +121,7 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
       <li class="one_third">
         <article><a href="#"><i class="fab fa-sticker-mule"></i></a>
+          <img class="borderedbox inspace-10" src="images/demo/480x300.png" alt="">
           <h6 class="heading">Bibendum</h6>
           <p>Hendrerit velit ac augue cras pharetra donec ligula mauris euismod sed lobortis quis ultricies lacus aenean.</p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
@@ -124,6 +129,7 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
       <li class="one_third">
         <article><a href="#"><i class="fas fa-user-secret"></i></a>
+          <img class="borderedbox inspace-10" src="images/demo/480x300.png" alt="">
           <h6 class="heading">Phasellus</h6>
           <p>Auctor lorem a felis aliquam quam mi rutrum malesuada consequat vitae accumsan ut lacus aliquam ante tortor.</p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
@@ -131,6 +137,7 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
       <li class="one_third">
         <article><a href="#"><i class="fas fa-quidditch"></i></a>
+          <img class="borderedbox inspace-10" src="images/demo/480x300.png" alt="">
           <h6 class="heading">Vestibulum</h6>
           <p>Suscipit sed semper ac nulla quisque eget lectus a quam ullamcorper consectetuer aliquam molestie tempor mauris.</p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
@@ -138,11 +145,12 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
       <li class="one_third">
         <article><a href="#"><i class="fas fa-wheelchair"></i></a>
+          <img class="borderedbox inspace-10" src="images/demo/480x300.png" alt="">
           <h6 class="heading">Pellentesque</h6>
           <p>Nunc accumsan metus quis metus vestibulum ut neque proin commodo semper magna aenean id eros vitae.</p>
           <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
         </article>
-      </li>
+      </li> -->
     </ul>
     <!-- ################################################################################################ -->
   </section>

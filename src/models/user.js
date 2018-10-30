@@ -1,7 +1,7 @@
  'use strict';
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Schema = new Schema({
+const schema = new Schema({
    usuario:{
        type:String,
        required:true,
@@ -9,7 +9,6 @@ const Schema = new Schema({
    },
 	cpf:{
         type:Number,
-        require:true,
         trim:true,
         unique:true,
         require:true
@@ -81,3 +80,5 @@ const Schema = new Schema({
 					valorFrete:String
 				} ],
 });
+
+module.exports = mongoose.model('User',schema);

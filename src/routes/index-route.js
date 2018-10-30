@@ -9,9 +9,9 @@ router.get('/',(req,res,next)=>{
         version:"0.0.1"
     });
 });
-
+/*
 router.get('/index',(req,res,next)=>{
     res.render("index.ejs");
 });
-
+*/
 module.exports = router;
