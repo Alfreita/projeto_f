@@ -26,8 +26,8 @@ exports.get = (req, res, next) => {
             active: true
         }, /*'title price slug'*/)
         .then(data => {
-           // res.status(200).send(data);
-              res.render('index.ejs',{lista:data});
+            res.status(200).send(data);
+            //res.render('index.ejs',{lista:data});
         }).catch(e => {
             res.status(400).send({
                 e

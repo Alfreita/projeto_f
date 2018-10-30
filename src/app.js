@@ -17,14 +17,14 @@ const apiTeste = require('./routes/index-route');
 const productsRoute = require('./routes/product-route');
 const userRoute = require('./routes/user-route');
 app.use(express.static('./src/public'));
-app.set('view engine','ejs');
-app.set('views','./src/views');
+app.set('view engine', 'ejs');
+app.set('views', './src/public/views');
 app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.urlencoded({
+    extended: false
+}));
 
-
-app.use('/',apiTeste);
-app.use('/products',productsRoute);
-app.use('/user',userRoute);
-
+app.use('/', apiTeste);
+app.use('/products', productsRoute);
+app.use('/user', userRoute);
 module.exports = app;
