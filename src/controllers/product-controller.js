@@ -34,13 +34,13 @@ exports.get = (req, res, next) => {
             });
         });
 };
-exports.getBySlug = (req, res, next) => {
+exports.getById = (req, res, next) => {
 
     Product
         .findOne({
-            slug: req.params.slug,
+            id: req.params.id,
             active: true
-        }, 'title description price slug tags')
+        })
         .then(data => {
             res.status(200).send(data);
         }).catch(e => {
@@ -54,7 +54,7 @@ exports.getByTag = (req, res, next) => {
         .find({
             tags: req.params.tag,
             active: true
-        }, 'title description price slug')
+        })
         .then(data => {
             res.status(200).send(data);
         }).catch(e => {
