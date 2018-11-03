@@ -18,9 +18,7 @@ const schema = new Schema({
         require:true
     },
 	cnpj:{
-        type:Number,
-        trim:true,
-        unique:true
+        type:Number
 
     },
 	rg:{

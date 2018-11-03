@@ -7,6 +7,6 @@ const controller = require('../controllers/user-controller');
 router.post('/',controller.post);
 router.get('/',controller.get);
 router.get('/',controller.getByCpf);
-router.get('/',controller.doLogin);
+router.get('/login',controller.doLogin);
 
 module.exports = router;
