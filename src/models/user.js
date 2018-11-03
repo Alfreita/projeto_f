@@ -7,6 +7,10 @@ const schema = new Schema({
        required:true,
        trim:true
    },
+   senha:{
+    type:String,
+    required:true
+   },
 	cpf:{
         type:Number,
         trim:true,

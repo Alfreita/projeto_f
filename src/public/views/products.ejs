@@ -11,7 +11,7 @@
 <body id="top">
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper bgded overlay parallax" style="background-image:url('images/demo/backgrounds/01.png');">
+  <div class="wrapper bgded overlay parallax" style="background-image:url('../images/demo/backgrounds/01.png');">
     <div class="hoc clear">
        <!-- ################################################################################################ -->
        <nav id="mainav">
@@ -47,12 +47,14 @@
             <li class="one_third">
               <article><a href="#"><i class="fab fa-fort-awesome"></i></a>
                 <img class="borderedbox inspace-10" src=<%=lista[i].url %> alt="">
-                <h6 class="heading"><%=lista[i].title %></h6>
-                <p><%=lista[i].description %></p>
-                <p><%=lista[i].price%></p>
-                <!-- LISTA O PRODUTO ESPECIFICO 
+                <h6 class="heading">
+                  <%=lista[i].title %>
+                </h6>
+                <p>
+                  <%=lista[i].description %>
+                </p>
+                <!-- LISTA O PRODUTO ESPECIFICO -->
                 <footer><a href="http://localhost:3000/index/product/<%=lista[i].id%>"><i class="fas fa-arrow-right"></i></a></footer>
-                -->
               </article>
               <% } %>
           </ul>
@@ -138,9 +140,9 @@
     <!-- ################################################################################################ -->
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
     <!-- JAVASCRIPTS -->
-    <script src="layout/scripts/jquery.min.js"></script>
-    <script src="layout/scripts/jquery.backtotop.js"></script>
-    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.backtotop.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
   </div>
 
 

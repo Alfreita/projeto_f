@@ -43,3 +43,15 @@ exports.getByCpf=(req,res,next)=>{
             });
         });
 };
+
+exports.doLogin=(req,res,next)=>{
+    User.findOne({
+        usuario:req.body.usuario,
+        senha:req.body.senha
+    }).then(data=>{
+        res.status(200).send(data);
+        console.log("usario cadastrado");
+    }).catch(e=> {
+        console.log("usuario não cadastrado");
+    });
+}

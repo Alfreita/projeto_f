@@ -68,8 +68,7 @@
             volutpat&hellip;</p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </div>
-        <div class="one_half"><a class="imgover" href="index/product"><img class="borderedbox inspace-10" src=<%=lista[1].url
-              %> alt=""></a></div>
+        <div class="one_half"><a class="imgover" href="index/products"><img class="borderedbox inspace-10" src=<%=lista[1].url%> alt=""></a></div>
       </article>
       <!-- ################################################################################################ -->
       <!-- / main body -->
@@ -95,7 +94,7 @@
             <p>
               <%=lista[i].description %>
             </p>
-            <footer><a href="#"><i class="fas fa-arrow-right"></i></a></footer>
+            <footer><a href="http://localhost:3000/index/product/<%=lista[i].id%>"<i class="fas fa-arrow-right"></i></a></footer>
           </article>
           <% } %>
         </li>

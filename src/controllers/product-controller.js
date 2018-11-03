@@ -37,8 +37,8 @@ exports.get = (req, res, next) => {
 exports.getById = (req, res, next) => {
 
     Product
-        .findOne({
-            id: req.params.id,
+        .find({
+            _id: req.params.id,
             active: true
         })
         .then(data => {

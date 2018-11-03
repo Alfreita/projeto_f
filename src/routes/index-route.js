@@ -30,13 +30,30 @@ router.get('/index', (req, res, next) => {
 });
 
 
-router.get('/index/product', (req, res, next) => {
+router.get('/index/products', (req, res, next) => {
     Product
         .find({
             active: true
         }, /*'title price slug'*/ )
         .then(data => {
             // res.status(200).send(data);
+            res.render('products.ejs', {
+                lista: data
+            });
+        }).catch(e => {
+            res.status(400).send({
+                e
+            });
+        });
+});
+
+router.get('/index/product/:id', (req, res, next) => {
+    Product
+        .find({
+            _id: req.params.id,
+            active: true
+        })
+        .then(data => {
             res.render('product.ejs', {
                 lista: data
             });
@@ -46,4 +63,5 @@ router.get('/index/product', (req, res, next) => {
             });
         });
 });
+
 module.exports = router;

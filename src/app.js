@@ -16,7 +16,7 @@ const User = require('./models/user');
 const apiTeste = require('./routes/index-route');
 const productsRoute = require('./routes/product-route');
 const userRoute = require('./routes/user-route');
-app.use(express.static('./src/public'));
+app.use(express.static('./src/public/'));
 app.set('view engine', 'ejs');
 app.set('views', './src/public/views');
 app.use(bodyparser.json());
