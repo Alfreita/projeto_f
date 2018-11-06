@@ -2,26 +2,26 @@
 
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
-exports.post = (req,res,next) =>{
+exports.post = (req, res, next) => {
     var user = new User(req.body);
-    user    
+    user
         .save()
-        .then(x=>{
+        .then(x => {
             res.status(201).send({
-                message:'usuario cadastrado com sucesso'
+                message: 'usuario cadastrado com sucesso'
             });
-        }).catch(e=>{
+        }).catch(e => {
             res.status(400).send({
-                message:'Falha ao cadastrar usuario',
-                data:e
+                message: 'Falha ao cadastrar usuario',
+                data: e
             });
         });
 
 }
-exports.get =(req,res,next)=>{
+exports.get = (req, res, next) => {
     User
         .find({})
-        .then(data =>{
+        .then(data => {
             res.status(200).send(data);
         }).catch(e => {
             res.status(400).send({
@@ -30,10 +30,10 @@ exports.get =(req,res,next)=>{
         });
 };
 
-exports.getByCpf=(req,res,next)=>{
+exports.getByCpf = (req, res, next) => {
     User
         .find({
-            cpf:req.params.cpf
+            cpf: req.params.cpf
         })
         .then(data => {
             res.status(200).send(data);
@@ -45,13 +45,13 @@ exports.getByCpf=(req,res,next)=>{
 };
 
 exports.doLogin=(req,res,next)=>{
-    User.findOne({
-        usuario:req.body.usuario,
-        senha:req.body.senha
+    console.log(req.query.usuario,req.query.senha);
+    User.find({
+        usuario: req.query.usuario,
+        senha:req.query.senha
     }).then(data=>{
-        res.status(200).send(data);
-        console.log("usario cadastrado");
+      res.send(data);
     }).catch(e=> {
-        console.log("usuario não cadastrado");
+        res.send("invalido");
     });
 }

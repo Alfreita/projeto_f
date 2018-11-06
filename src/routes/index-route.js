@@ -64,4 +64,8 @@ router.get('/index/product/:id', (req, res, next) => {
         });
 });
 
+router.get('/index/login',(req,res,next)=>{
+    res.render('dologin.ejs');
+});
+
 module.exports = router;

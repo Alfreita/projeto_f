@@ -6,7 +6,7 @@ const controller = require('../controllers/user-controller');
 
 router.post('/',controller.post);
 router.get('/',controller.get);
-router.get('/',controller.getByCpf);
 router.get('/login',controller.doLogin);
+router.get('/cpf/:cpf',controller.getByCpf);
 
 module.exports = router;
