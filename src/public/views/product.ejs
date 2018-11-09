@@ -24,7 +24,7 @@
               <li><a href="pages/sidebar-left.html">Consoles</a></li>
               <li><a href="pages/sidebar-right.html">Hardware PC</a></li>
               <li><a href="pages/basic-grid.html">Periféricos</a></li>
-              <li><a href="http://localhost:3000/index/product">Todos os produtos</a></li>
+              <li><a href="http://localhost:3000/index/products">Todos os produtos</a></li>
             </ul>
           </li>
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
@@ -40,7 +40,7 @@
         <section id="services" class="hoc container clear">
           <!-- ################################################################################################ -->
           <div class="center btmspace-80">
-            <h6 class="heading underline font-x2">Nossos produtos</h6>
+            <h6 class="heading underline font-x2">Produto</h6>
           </div>
           <ul class="nospace group">
             <% for(var i=0;i<lista.length;i++){ %>
@@ -54,7 +54,7 @@
                   <%=lista[i].description %>
                 </p>
                 <p>
-                  <%=lista[i].price%>
+                  Preço:<%=lista[i].price%>
                 </p>
                 <!-- LISTA O PRODUTO ESPECIFICO 
                 <footer><a href="http://localhost:3000/index/product/<%=lista[i].id%>"><i class="fas fa-arrow-right"></i></a></footer>
