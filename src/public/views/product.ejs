@@ -30,7 +30,7 @@
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">Carrinho</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="http://localhost:3000/index/login">Login</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -42,33 +42,35 @@
           <div class="center btmspace-80">
             <h6 class="heading underline font-x2">Produto</h6>
           </div>
-          <ul class="nospace group">
-            <% for(var i=0;i<lista.length;i++){ %>
-            <li class="one_third">
-              <article><a href="#"><i class="fab fa-fort-awesome"></i></a>
-                <img class="borderedbox inspace-10" src=<%=lista[i].url %> alt="">
-                <h6 class="heading">
-                  <%=lista[i].title %>
-                </h6>
-                <p>
-                  <%=lista[i].description %>
-                </p>
-                <p>
-                  Preço:<%=lista[i].price%>
-                </p>
-                <!-- LISTA O PRODUTO ESPECIFICO 
-                <footer><a href="http://localhost:3000/index/product/<%=lista[i].id%>"><i class="fas fa-arrow-right"></i></a></footer>
-                -->
+
+          <div class="wrapper ">
+            <main class="hoc container clear">
+                <% for(var i=0;i<lista.length;i++){ %>
+              <!-- main body -->
+              <!-- ################################################################################################ -->
+              <article class="group">
+                <div class="one_half first">
+                  <h6 class="heading underline font-x2"><%=lista[i].title%></h6>
+                  <p>Um dos jogos mais empolgantes do momento </p>
+                  <p class="btmspace-30"><%=lista[i].description%>&hellip;</p>
+                  <p>Por apenas:  R$  <%=lista[i].price%></p>
+                  <footer><a class="btn" href="/product/<%=lista[i].id%>">Compre agora</a></footer>
+                </div>
+                <div class="one_half"><a class="imgover" href="http://localhost:3000/index/products"><img class="borderedbox inspace-10" src=<%=lista[i].url%> alt=""></a></div>
               </article>
+              <!-- ################################################################################################ -->
+              <!-- / main body -->
+              <div class="clear"></div>
               <% } %>
-          </ul>
+            </main>
+          </div>
           <!-- ################################################################################################ -->
         </section>
       </div>
       <!-- ################################################################################################ -->
     </div>
     <!-- ################################################################################################ -->
-    <div class="wrapper row4">
+    <div class="wrapper row4" style="background-image:url('../images/demo/backgrounds/forza7.png');">
       <footer id="footer" class="hoc clear">
         <!-- ################################################################################################ -->
         <div class="one_quarter first">
