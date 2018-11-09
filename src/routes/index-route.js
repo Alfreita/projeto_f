@@ -11,7 +11,9 @@ router.get('/', (req, res, next) => {
         version: "0.0.1"
     });
 });
-
+router.get('/index/teste',(req,res,next)=>{
+    res.render('teste.ejs');
+});
 router.get('/index', (req, res, next) => {
     Product
         .find({
@@ -47,16 +49,16 @@ router.get('/index/products', (req, res, next) => {
         });
 });
 
-router.get('/index/product/:id', (req, res, next) => {
+router.get('/product/:id', (req, res, next) => {
     Product
         .find({
             _id: req.params.id,
             active: true
         })
         .then(data => {
-            res.render('product.ejs', {
-                lista: data
-            });
+             res.render('product.ejs', {
+                 lista: data
+             });
         }).catch(e => {
             res.status(400).send({
                 e
