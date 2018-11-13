@@ -67,7 +67,11 @@ router.get('/product/:id', (req, res, next) => {
 });
 
 router.get('/index/login',(req,res,next)=>{
-    res.render('dologin.ejs');
+    res.render('novoLogin.ejs');
+});
+
+router.get('/index/login1',(req,res,next)=>{
+    res.render('doLogin.ejs');
 });
 
 module.exports = router;
