@@ -44,14 +44,14 @@ exports.getByCpf = (req, res, next) => {
         });
 };
 
-exports.doLogin=(req,res,next)=>{
-    console.log(req.query.usuario,req.query.senha);
-    User.find({
-        usuario: req.query.usuario,
-        senha:req.query.senha
-    }).then(data=>{
-      res.send(data);
-    }).catch(e=> {
+exports.doLogin = (req, res, next) => {
+    console.log(req.query.email, req.query.senha);
+    User.findOne({
+        email: req.query.email,
+        senha: req.query.senha
+    }).then(data => {
+        res.send(data);
+    }).catch(e => {
         res.send("invalido");
     });
 }
