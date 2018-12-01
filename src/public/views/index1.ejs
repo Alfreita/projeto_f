@@ -5,13 +5,13 @@
   <title>HardGames</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body id="top">
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper bgded overlay parallax" style="background-image:url('images/demo/backgrounds/01.png');">
+  <div class="wrapper bgded overlay parallax" style="background-image:url('../images/demo/backgrounds/01.png');">
     <div class="hoc clear">
       <!-- ################################################################################################ -->
       <nav id="mainav">
@@ -30,7 +30,12 @@
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">Carrinho</a></li>
-            <li><a href="http://localhost:3000/index/login">Login</a></li>
+          <%if(usuario == null){ %>
+            <li><a href="http://localhost:3000/index/login">Login</></li>
+         <% } else { %>
+            <li><a href="http://localhost:3000/index/login"> <%= usuario.nome %> </li>
+         <%}%>
+          
         </ul>
       </nav>
       <!-- ################################################################################################ -->

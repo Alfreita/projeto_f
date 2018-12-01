@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
+const querystring = require('querystring');    
 exports.post = (req, res, next) => {
     var user = new User(req.body);
     user
@@ -45,13 +46,28 @@ exports.getByCpf = (req, res, next) => {
 };
 
 exports.doLogin = (req, res, next) => {
-    console.log(req.query.email, req.query.senha);
+  //  console.log(req.query.email, req.query.senha);
+    let email = req.query.email;
+    //console.log(req);
     User.findOne({
         email: req.query.email,
         senha: req.query.senha
     }).then(data => {
-        res.send(data);
+      // console.log(data);
+      //console.log(email); 
+      if(data === null){
+        res.redirect('http://localhost:3000/indexe/'+ data);
+      }else{
+        const query = querystring.stringify({
+            "nome":data.name,
+            "cpf":data.cpf,
+            "id":data._id+''
+        });
+        
+        res.redirect('http://localhost:3000/indexe'+ "?"+query);
+      }
+       
     }).catch(e => {
-        res.send("invalido");
+        res.send(e);
     });
 }
