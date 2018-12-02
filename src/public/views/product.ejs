@@ -30,7 +30,11 @@
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">Carrinho</a></li>
-          <li><a href="http://localhost:3000/index/login">Login</a></li>
+          <%if(user == null){ %>
+            <li><a href="http://localhost:3000/index/login">Login</></li>
+         <% } else { %>
+            <li><%= user %> </li>
+         <%}%>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -52,9 +56,11 @@
                 <div class="one_half first">
                   <h6 class="heading underline font-x2"><%=lista[i].title%></h6>
                   <p>Um dos jogos mais empolgantes do momento </p>
-                  <p class="btmspace-30"><%=lista[i].description%>&hellip;</p>
+                  <p class="btmspace-30"><%=lista[i].description%></p>
                   <p>Por apenas:  R$  <%=lista[i].price%></p>
-                  <footer><a class="btn" href="/product/<%=lista[i].id%>">Compre agora</a></footer>
+                  <form action="http://localhost:3000/pedido/<%=lista[i].id%>" method="post"> 
+                      <footer><input type="submit" class="login100-form-btn" value="Comprar"/></footer>
+                  </form>
                 </div>
                 <div class="one_half"><a class="imgover" href="http://localhost:3000/index/products"><img class="borderedbox inspace-10" src=<%=lista[i].url%> alt=""></a></div>
               </article>

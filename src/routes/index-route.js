@@ -5,6 +5,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Product = mongoose.model('Product');
 const url = require('url');
+const dbuser = require('../dbusuario') 
 
 router.get('/', (req, res, next) => {
     res.status(200).send({
@@ -23,9 +24,11 @@ router.get('/index', (req, res, next) => {
             active: true
         }, /*'title price slug'*/ )
         .then(data => {
+            let user = dbuser.getUsuario();
+            //console.log(user);
             // res.status(200).send(data);
             res.render('index.ejs', {
-                lista: data
+                lista: data , user
             });
         }).catch(e => {
             res.status(400).send({
@@ -78,8 +81,10 @@ router.get('/product/:id', (req, res, next) => {
             active: true
         })
         .then(data => {
+            let user = dbuser.getUsuario();
+            console.log(user);
              res.render('product.ejs', {
-                 lista: data
+                 lista: data,user
              });
         }).catch(e => {
             res.status(400).send({

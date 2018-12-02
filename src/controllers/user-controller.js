@@ -2,7 +2,8 @@
 
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
-const querystring = require('querystring');    
+const querystring = require('querystring');   
+const dbuser = require('../dbusuario'); 
 exports.post = (req, res, next) => {
     var user = new User(req.body);
     user
@@ -46,27 +47,21 @@ exports.getByCpf = (req, res, next) => {
 };
 
 exports.doLogin = (req, res, next) => {
-  //  console.log(req.query.email, req.query.senha);
-    let email = req.query.email;
-    //console.log(req);
     User.findOne({
         email: req.query.email,
         senha: req.query.senha
     }).then(data => {
-      // console.log(data);
-      //console.log(email); 
       if(data === null){
-        res.redirect('http://localhost:3000/indexe/'+ data);
+        res.send('Acesso negado');
       }else{
         const query = querystring.stringify({
             "nome":data.name,
             "cpf":data.cpf,
             "id":data._id+''
         });
-        
-        res.redirect('http://localhost:3000/indexe'+ "?"+query);
+        dbuser.saveUsuario(data.name,data.id,data.cpf);
+        res.redirect('http://localhost:3000/index');
       }
-       
     }).catch(e => {
         res.send(e);
     });

@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const Pedido = mongoose.model('Pedido');
+const dbuser = require('../dbusuario'); 
 
 exports.get = async (req, res, next) => {
 
@@ -19,7 +20,13 @@ exports.get = async (req, res, next) => {
  };
 
 exports.post = async(req, res, next) => {
-    var pedido = new Pedido(req.body);
+    let userid = dbuser.getId();
+   let pedidoC ={
+        "customer":userid,
+        "product":req.params.id
+    }
+    console.log(userid,req.params.id);
+    var pedido = new Pedido(pedidoC);
     pedido.save()
     .then(x=>{
         res.status(201).send({
