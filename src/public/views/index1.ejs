@@ -5,13 +5,13 @@
   <title>HardGames</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body id="top">
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper bgded overlay parallax" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <div class="wrapper bgded overlay parallax" style="background-image:url('images/demo/backgrounds/01.png');">
     <div class="hoc clear">
       <!-- ################################################################################################ -->
       <nav id="mainav">
@@ -19,23 +19,11 @@
           <li class="active"><a href="http://localhost:3000/index">Home</a></li>
           <li><a class="drop" href="#">Produtos</a>
             <ul>
-              <li><a href="pages/gallery.html">Jogos PS4</a></li>
-              <li><a href="pages/full-width.html">Jogos XBOX ONE</a></li>
-              <li><a href="pages/sidebar-left.html">Consoles</a></li>
-              <li><a href="pages/sidebar-right.html">Hardware PC</a></li>
-              <li><a href="pages/basic-grid.html">Periféricos</a></li>
               <li><a href="http://localhost:3000/index/products">Todos os produtos</a></li>
             </ul>
           </li>
-          <li><a href="#">TROCAR ESSE BOTAO</a></li>
-          <li><a href="#">TROCAR ESSE BOTAO</a></li>
           <li><a href="#">Carrinho</a></li>
-          <%if(usuario == null){ %>
-            <li><a href="http://localhost:3000/index/login">Login</></li>
-         <% } else { %>
-            <li><a href="http://localhost:3000/index/login"> <%= usuario.nome %> </li>
-         <%}%>
-          
+            <li><a href="http://localhost:3000/index/login">Login</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -67,7 +55,6 @@
       <article class="group">
         <div class="one_half first">
           <h6 class="heading underline font-x2"><%=lista[1].title%></h6>
-          <p>Nec vel purus in leo elit mattis non imperdiet sed pulvinar.</p>
           <p class="btmspace-30"><%=lista[1].description%>&hellip;</p>
           <footer><a class="btn" href="/product/<%=lista[1].id%>">Saiba mais</a></footer>
         </div>
@@ -119,7 +106,7 @@
       <!-- ################################################################################################ -->
       <div class="one_quarter first">
         <h1 class="logoname clear"><a href="index.html"><i class="fas fa-handshake"></i> <span>HardGames</span></a></h1>
-        <p class="btmspace-30">Surgimos com o intuito de alegrar o seu dia,desde jogos a perifericos<a href="#">&hellip;</a></p>
+        <p class="btmspace-30">Os melhores games e periféricos pelo melhor preço<a href="#">&hellip;</a></p>
         <ul class="faico clear">
           <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
           <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
@@ -129,42 +116,34 @@
         </ul>
       </div>
       <div class="one_quarter">
-        <h6 class="heading">Felis lobortis pulvinar</h6>
+        <h6 class="heading">Localização</h6>
         <ul class="nospace linklist contact">
           <li><i class="fas fa-map-marker-alt"></i>
             <address>
-              Street Name &amp; Não sabemos mas um dia teremos um lugar
+              Rua Professor Dr. Euryclides de Jesus Zerbini, 1516 - Parque Rural Fazenda Santa Cândida, Campinas - SP, 13087-571
             </address>
           </li>
-          <li><i class="fas fa-phone"></i> +55 (19) 99938-1313</li>
-          <li><i class="fas fa-fax"></i> +00 (123) 456 7890</li>
-          <li><i class="far fa-envelope"></i> info@HardGames.com</li>
+          
         </ul>
       </div>
       <div class="one_quarter">
-        <h6 class="heading">In cursus placerat velit</h6>
+        <h6 class="heading">Desenvolvedores</h6>
         <ul class="nospace linklist">
-          <li><a href="#">Maecenas sem fusce quis</a></li>
-          <li><a href="#">Vel leo semper rhoncus ut</a></li>
-          <li><a href="#">Suscipit pede eu diam class</a></li>
-          <li><a href="#">Aptent taciti sociosqu ad</a></li>
+          <li><a href="https://www.facebook.com/erich.silveira?__tn__=%2CdC-R-R&eid=ARCcDIbmVu4kZy5RsY_d9pRS8TEWVVl2K61wqIEOBBCdUJiYe9ziJ2QB0CZ-v4mFxSXvjco4Q-yZd_VN&hc_ref=ARTfOyNhVYF80Jx4zN2fxCqWe6HxJzZyNY-9yeNvXeSbFFNvI7n0CfLaUTECPv6aqJw&fref=nf">Erich Nelson</a></li>
+          <li><a href="https://www.facebook.com/lucas.cocucci?jazoest=265100121115689711166108846975668698861171068499851197978741167274841085411211595481175548738610165996569815865100120521101161078952120769511910155119105103759711011010712179656583775310354761111097112268654573457411865119">Lucas Cocucci</a></li>
+          <li><a href="https://www.facebook.com/paulo.henrique.75?jazoest=265100121115689711166108846975668698861171068499851197978741167274841085411211595481175548738610165996569815865100120521101161078952120769511910155119105103759711011010712179656583775310354761111097112268654573457411865119">Paulo Lavezo</a></li>
+          <li><a href="https://www.facebook.com/PedroHenriqueCremasco?jazoest=265100121115689711166108846975668698861171068499851197978741167274841085411211595481175548738610165996569815865100120521101161078952120769511910155119105103759711011010712179656583775310354761111097112268654573457411865119">Pedro Cremasco</a></li>
+          <li><a href="https://www.facebook.com/victor.almeidadefreitas?jazoest=265100121115689711166108846975668698861171068499851197978741167274841085411211595481175548738610165996569815865100120521101161078952120769511910155119105103759711011010712179656583775310354761111097112268654573457411865119">Victor Almeida</a></li>
         </ul>
       </div>
       <div class="one_quarter">
-        <h6 class="heading">Litora torquent conubia</h6>
+        <h6 class="heading">Contato</h6>
         <ul class="nospace linklist">
           <li>
             <article>
-              <p class="nospace btmspace-10"><a href="#">Nostra per inceptos himenaeos cras augue est dictum
-                  quis&hellip;</a></p>
-              <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            </article>
-          </li>
-          <li>
-            <article>
-              <p class="nospace btmspace-10"><a href="#">Suscipit vel est in pulvinar aliquam vulputate purus in
-                  tincidunt&hellip;</a></p>
-              <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+              <li><i class="fas fa-phone"></i> +55 (19) 99938-1313</li>
+              <li><i class="fas fa-fax"></i> +55 (19) 99938-1313</li>
+              <li><i class="far fa-envelope"></i> info@HardGames.com</li>
             </article>
           </li>
         </ul>
@@ -178,7 +157,7 @@
   <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
       <!-- ################################################################################################ -->
-      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Hard Games</a></p>
       <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS
           Templates</a></p>
       <!-- ################################################################################################ -->
