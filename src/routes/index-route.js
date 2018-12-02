@@ -12,9 +12,11 @@ router.get('/', (req, res, next) => {
         version: "0.0.1"
     });
 });
-router.get('/index/teste',(req,res,next)=>{
-    res.render('teste.ejs');
+
+router.get('/index/carrinho',(req,res,next)=>{
+    res.render('carrinho.ejs');
 });
+
 router.get('/index', (req, res, next) => {
     Product
         .find({
@@ -31,6 +33,7 @@ router.get('/index', (req, res, next) => {
             });
         });
 });
+
 router.get('/indexe', (req, res, next) => {
     let usuario = req.query;
     console.log(req.query);
@@ -50,7 +53,6 @@ router.get('/indexe', (req, res, next) => {
             });
         });
 });
-
 
 router.get('/index/products', (req, res, next) => {
     Product
