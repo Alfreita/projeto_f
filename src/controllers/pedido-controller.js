@@ -23,7 +23,9 @@ exports.post = async(req, res, next) => {
     let userid = dbuser.getId();
    let pedidoC ={
         "customer":userid,
-        "product":req.params.id
+        "items":[{
+                "product":req.params.id
+        }]
     }
     console.log(userid,req.params.id);
     var pedido = new Pedido(pedidoC);
