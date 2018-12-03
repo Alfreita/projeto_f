@@ -57,6 +57,17 @@ router.get('/indexe', (req, res, next) => {
         });
 });
 
+router.get('/usuario', (req, res, next) => {
+    let usuario = req.query;
+    console.log(req.query);
+            // res.status(200).send(data);
+            let user = dbuser.getUsuario();
+            res.render('usuario.ejs', {
+                 user
+            });
+
+});
+
 router.get('/index/products', (req, res, next) => {
     Product
         .find({

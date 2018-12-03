@@ -32,73 +32,34 @@
       </nav>
       <!-- ################################################################################################ -->
     </div>
-
     <div id="pageintro" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <article>
-        <h3 class="heading">Jogo da Semana<br>
-          Homem Aranha <br><br>
-          R$ 159,99</h3>
-          <p>Spider-Man é um jogo eletrônico de ação-aventura baseado no super-herói Homem-Aranha da Marvel Comics, desenvolvido pela Insomniac Games e publicado pela Sony Interactive Entertainment para o PlayStation 4. É o primeiro jogo licenciado desenvolvido pela Insomniac. O jogo conta uma nova história sobre o Homem-Aranha que não está ligada a uma história em quadrinhos ou algum filme, e abrange os aspectos de Peter Parker e Homem-Aranha no personagem.</p>
-        <footer>
-          <ul class="nospace inline pushright">
-
-            <li><a class="btn inverse" href="https://www.youtube.com/watch?v=ruDnPVYvPtM">Ver Gameplay</a></li>
-            <li><a class="btn inverse" href="#">Comprar</a></li>
-          </ul>
-        </footer>
-      </article>
-      <!-- ################################################################################################ -->
-    </div>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper ">
-    <main class="hoc container clear">
-      <!-- main body -->
-      <!-- ################################################################################################ -->
-      <article class="group">
-        <div class="one_half first">
-          <p>Lançamento</p> <br>
-          <h6 class="heading underline font-x2"><%=lista[1].title%></h6>
-          <p class="btmspace-30"><%=lista[1].description%>&hellip;</p>
-          <footer><a class="btn" href="/product/<%=lista[1].id%>">Saiba mais</a>
-          
-            <a class="btn">Comprar</a>
+        <!-- ################################################################################################ -->
+        <article>
+          <h3 class="heading">Pedido Realizado com Sucesso, <%= user %></h3>
+                        </br>
+          <p></p>
+            
+          <footer>
+            <ul class="nospace inline pushright">
+      
+              <li><a class="btn inverse" href="#">Fazer Logout</a></li>
+              <li><a class="btn inverse" href="http://localhost:3000/index/carrinho">Ver Carrinho</a></li>
+            </ul>
           </footer>
-        </div>
-        <div class="one_half"><a class="imgover" href="http://localhost:3000/index/products"><img class="borderedbox inspace-10" src=<%=lista[1].url%> alt=""></a></div>
-      </article>
-      <!-- ################################################################################################ -->
-      <!-- / main body -->
-      <div class="clear"></div>
-    </main>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row3">
-    <section id="services" class="hoc container clear">
-      <!-- ################################################################################################ -->
-      <div class="center btmspace-80">
-        <h6 class="heading underline font-x2">Favoritos da Galera</h6>
+        </article>
+        <!-- ################################################################################################ -->
       </div>
-      <ul class="nospace group">
-        <% for(var i=0;i<lista.length;i++){ %>
-        <li class="one_third">
-          <article><a href="#"><i class="fab fa-fort-awesome"></i></a>
-            <img class="borderedbox inspace-10" src=<%=lista[i].url %> alt="">
-            <h6 class="heading"> <%=lista[i].title %></h6>
-           
-            <footer><a href="/product/<%=lista[i].id%>"<i class="fas fa-arrow-right"></i></a></footer>
-          </article>
-          <% } %>
-        </li>
-
-      </ul>
-      <!-- ################################################################################################ -->
-    </section>
+      </div>
   </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+</div>
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->

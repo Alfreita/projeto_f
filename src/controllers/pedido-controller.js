@@ -31,9 +31,13 @@ exports.post = async(req, res, next) => {
     var pedido = new Pedido(pedidoC);
     pedido.save()
     .then(x=>{
-        res.status(201).send({
-            message:'pedido realizado com sucesso'
-        });
+        let user = dbuser.getUsuario();
+        res.render('pedido.ejs', {
+            user
+       });
+        // res.status(201).send({
+        //     message:'pedido realizado com sucesso'
+        // });
     }).catch(e =>{
         res.status(400).send({
             message:'Falha ao cadastrar pedido ',
