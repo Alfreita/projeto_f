@@ -100,4 +100,8 @@ router.get('/index/logout',(req,res,next)=>{
     });
 });
 
+router.get('/cadastrousuario',(req,res)=>{
+    res.render('cadastroUsuario.ejs');
+});
+
 module.exports = router;
