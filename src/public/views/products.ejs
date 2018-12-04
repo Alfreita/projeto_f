@@ -23,7 +23,11 @@
             </ul>
           </li>
           <li><a href="http://localhost:3000/index/carrinho">Carrinho</a></li>
-            <li><a href="http://localhost:3000/index/login">Login</a></li>
+          <%if(user == null){ %>
+            <li><a href="http://localhost:3000/index/login">Login</></li>
+         <% } else { %>
+            <li><a href="http://localhost:3000/usuario"> <%= user %> </li>
+         <%}%>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
