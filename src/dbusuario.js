@@ -19,3 +19,9 @@ exports.saveUsuario = (usuario,id,cpf)=>{
   this.id = id;
   this.cpf = cpf;
 };
+
+exports.doLogout = ()=>{
+    this.usuario = null;
+    this.id = null;
+    this.cpf = null;
+  };

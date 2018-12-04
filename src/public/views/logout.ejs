@@ -5,13 +5,13 @@
   <title>HardGames</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body id="top">
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper bgded overlay parallax" style="background-image:url('images/demo/backgrounds/01.png');">
+  <div class="wrapper bgded overlay parallax" style="background-image:url('../images/demo/backgrounds/01.png');">
     <div class="hoc clear">
       <!-- ################################################################################################ -->
       <nav id="mainav">
@@ -23,11 +23,7 @@
             </ul>
           </li>
           <li><a href="http://localhost:3000/index/carrinho">Carrinho</a></li>
-          <%if(user == null){ %>
             <li><a href="http://localhost:3000/index/login">Login</></li>
-         <% } else { %>
-            <li><a href="http://localhost:3000/usuario"> <%= user %> </li>
-         <%}%>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -35,14 +31,14 @@
     <div id="pageintro" class="hoc clear">
         <!-- ################################################################################################ -->
         <article>
-          <h3 class="heading">Olá <%= user %></h3>
+          <h3 class="heading">Logout Realizado com Sucesso, <%= user %></h3>
                         </br>
           <p></p>
             
           <footer>
             <ul class="nospace inline pushright">
       
-              <li><a class="btn inverse" href="http://localhost:3000/index/logout">Fazer Logout</a></li>
+              <li><a class="btn inverse" href="#">Fazer Logout</a></li>
               <li><a class="btn inverse" href="http://localhost:3000/index/carrinho">Ver Carrinho</a></li>
             </ul>
           </footer>
@@ -63,7 +59,7 @@
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="parallaxmini wrapper bgded overlay light" style="background-image:url('images/demo/backgrounds/02.png');">
+  <div class="parallaxmini wrapper bgded overlay light" style="background-image:url('../images/demo/backgrounds/02.png');">
     <section id="cta" class="hoc container clear">
       <!-- ################################################################################################ -->
       <h6 class="three_quarter first">Seja um colaborador</h6>
