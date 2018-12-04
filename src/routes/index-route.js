@@ -104,4 +104,8 @@ router.get('/cadastrousuario',(req,res)=>{
     res.render('cadastroUsuario.ejs');
 });
 
+router.get('/cadastroproduto',(req,res)=>{
+    res.render('cadastroProduto.ejs');
+});
+
 module.exports = router;
