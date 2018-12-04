@@ -25,7 +25,7 @@ const schema = new  Schema({
     },
     tags:[{
         type:String,
-        require:true
+        default:["PS4","XBOX","GAME","PC"]
     }]
 });
 module.exports = mongoose.model('Product',schema);
