@@ -15,7 +15,10 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/index/carrinho',(req,res,next)=>{
-    res.render('carrinho.ejs');
+    let user = dbuser.getUsuario();
+    res.render('carrinho.ejs',{
+        user
+    });
 });
 
 router.get('/index', (req, res, next) => {
@@ -37,25 +40,6 @@ router.get('/index', (req, res, next) => {
         });
 });
 
-router.get('/indexe', (req, res, next) => {
-    let usuario = req.query;
-    console.log(req.query);
-    Product
-        .find({
-            active: true
-        }, /*'title price slug'*/ )
-        .then(data => {
-            // res.status(200).send(data);
-            res.render('index1.ejs', {
-                lista: data, usuario
-                
-            });
-        }).catch(e => {
-            res.status(400).send({
-                e
-            });
-        });
-});
 
 router.get('/usuario', (req, res, next) => {
     let usuario = req.query;
@@ -75,8 +59,9 @@ router.get('/index/products', (req, res, next) => {
         }, /*'title price slug'*/ )
         .then(data => {
             // res.status(200).send(data);
+            let user = dbuser.getUsuario();
             res.render('products.ejs', {
-                lista: data
+                lista: data ,user
             });
         }).catch(e => {
             res.status(400).send({
