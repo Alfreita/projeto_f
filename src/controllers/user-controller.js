@@ -9,9 +9,7 @@ exports.post = (req, res, next) => {
     user
         .save()
         .then(x => {
-            res.status(201).send({
-                message: 'usuario cadastrado com sucesso'
-            });
+                res.redirect('http://localhost:3000/index/login');
         }).catch(e => {
             res.status(400).send({
                 message: 'Falha ao cadastrar usuario',
