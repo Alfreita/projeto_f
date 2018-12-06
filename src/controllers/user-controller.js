@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const querystring = require('querystring');   
 const dbuser = require('../dbusuario'); 
+
 exports.post = (req, res, next) => {
     var user = new User(req.body);
     user

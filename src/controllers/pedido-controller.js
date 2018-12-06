@@ -35,9 +35,6 @@ exports.post = async(req, res, next) => {
         res.render('pedido.ejs', {
             user
        });
-        // res.status(201).send({
-        //     message:'pedido realizado com sucesso'
-        // });
     }).catch(e =>{
         res.status(400).send({
             message:'Falha ao cadastrar pedido ',

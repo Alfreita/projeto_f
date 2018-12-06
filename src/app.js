@@ -1,6 +1,4 @@
 'use strict'
-//parei na aula 23
-//mLab banco de dados mongoDB online 
 
 const express = require('express');
 const bodyparser = require('body-parser');

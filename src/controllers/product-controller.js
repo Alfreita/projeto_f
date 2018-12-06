@@ -20,14 +20,12 @@ exports.post = (req, res, next) => {
         });
 };
 exports.get = (req, res, next) => {
-
     Product
         .find({
             active: true
         }, /*'title price slug'*/)
         .then(data => {
             res.status(200).send(data);
-            //res.render('index.ejs',{lista:data});
         }).catch(e => {
             res.status(400).send({
                 e
@@ -35,7 +33,6 @@ exports.get = (req, res, next) => {
         });
 };
 exports.getById = (req, res, next) => {
-
     Product
         .find({
             _id: req.params.id,
