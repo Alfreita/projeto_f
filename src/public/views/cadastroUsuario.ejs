@@ -37,13 +37,29 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Usuario</label>
-                                    <input class="input--style-4" type="text" name="name">
+                                    <input class="input--style-4" type="text" name="name" required="required">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Senha</label>
-                                    <input class="input--style-4" type="password" name="senha">
+                                    <input class="input--style-4" type="password" name="senha" id="password" required="required">
+                                    <br><br><label class="label">Confirmação da Senha</label>
+                                    <input class="input--style-4" type="password" name="senha" id="confirm_password" required="required">
+                                    <script type="text/javascript">
+                                        var password = document.getElementById("password")
+                                            , confirm_password = document.getElementById("confirm_password");
+
+                                        function validatePassword(){
+                                            if(password.value != confirm_password.value) {
+                                            confirm_password.setCustomValidity("Senhas diferentes!");
+                                            } else {
+                                            confirm_password.setCustomValidity('');
+                                            }
+                                        }
+                                        password.onchange = validatePassword;
+                                        confirm_password.onkeyup = validatePassword;
+                                      </script>
                                 </div>
                             </div>
                         </div>
@@ -68,13 +84,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" name="email" required="required">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">cpf</label>
-                                    <input class="input--style-4" type="text" name="cpf">
+                                    <label class="label">CPF</label>
+                                    <input class="input--style-4" type="text" name="cpf" required="required">
                                 </div>
                             </div>
                         </div>
