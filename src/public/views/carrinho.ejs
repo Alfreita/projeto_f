@@ -21,47 +21,108 @@
           </li>
           <li><a href="http://localhost:3000/index/carrinho">Carrinho</a></li>
           <%if(user == null){ %>
-            <li><a href="http://localhost:3000/index/login">Login</></li>
+            <li><a href="http://localhost:3000/index/login">Login</a></li>
          <% } else { %>
-            <li><a href="http://localhost:3000/usuario"> <%= user %> </li>
+            <li><a href="http://localhost:3000/usuario"> <%= user %></a> </li>
          <%}%>
         </ul>
       </nav>
     <!-- ################################################################################################ -->
   </div>
 </div>
+
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay dark" style="background-image:url('../images/demo/backgrounds/05.png');">
+<div class="wrapper bgded overlay dark" style="background-image:url('../images/demo/backgrounds/u0CnGVu.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <h6 class="heading">Carrinho</h6>
     <main class="hoc container clear"> 
       <!-- main body -->
-        <div class="hoc container white">
-            <h1>USUARIO:-------</h1>
-            <input type="text" name="USUARIO">
-            <h1>EMAIL:-------</h1>
-            <input type="password" name="senha">
-            <h1>Compras:-------</h1>
-            <input type="text" name="compras">
-        </div>
-        <div >
-          <h2>Produtos comprados</h2>
+      <div class="basket">
+        
+        <div class="basket-labels">
           <ul>
-            <li>
-              <article>
-                <header>
-                  <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-
-                </header>
-                <div class="comcont">
-                  <p>Produto X</p>
-                  <p>Valor X</p>
-                </div>
-              </article>
-            </li>
+            <li class="item item-heading">Item</li>
+            <li class="price">Valor</li>
+            <li class="quantity">Quantidade</li>
+            <li class="subtotal">Subtotal</li>
           </ul>
         </div>
+        <div class="basket-product">
+          <div class="item">
+            <div class="product-image">
+              <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+            </div>
+            <div class="product-details">
+              <h1><strong><span class="btmspace-30"">4</span class="btmspace-30"> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
+              <p class="btmspace-30"><strong>Navy, Size 18</strong></p>
+              <p class="btmspace-30">Codigo - 232321939</p>
+            </div>
+          </div>
+          <div class="price">26.00</div>
+          <div class="quantity">
+            <input type="number" value="4" min="1" class="quantity-field">
+          </div>
+          <div class="subtotal">104.00</div>
+          <div class="remove">
+            <button class="btn inverse">Remover</button>
+            
+          </div>
+          
+        </div>
+        <div class="basket-product">
+          <div class="item">
+            <div class="product-image">
+              <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+            </div>
+            <div class="product-details">
+              <h1><strong><span class="item-quantity">1</span> x Whistles</strong> Amella Lace Midi Dress</h1>
+              <p><strong>Navy, Size 10</strong></p>
+              <p>Codigo - 232321939</p>
+            </div>
+          </div>
+          <div class="price">26.00</div>
+          <div class="quantity">
+            <input type="number" value="1" min="1" class="quantity-field">
+          </div>
+          <div class="subtotal">26.00</div>
+          <div class="remove">
+            <button class="btn inverse">Remover</button>
+            
+          </div>
+        </div>
+
+        
+
+      </div>
+       
+      <aside>
+        <div class="summary">
+          <div class="summary-total-items"><span class="total-items"></span> Carrinho </div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Subtotal</div>
+            <div class="subtotal-value final-value" id="basket-subtotal">130.00</div>
+         
+          </div>
+          <div class="summary-delivery">
+            <select name="delivery-collection" class="summary-delivery-selection">
+                <option value="0" selected="selected">Forma de pagamento</option>
+               <option value="collection">Master Card</option>
+               <option value="first-class">Visa</option>
+               <option value="second-class">Elo</option>
+               <option value="signed-for">Vale Refeicao</option>
+            </select>
+          </div>
+          <div class="summary-total">
+            <div class="total-title">Total</div>
+            <div class="total-value final-value" id="basket-total">130.00</div>
+          </div>
+          <div class="summary-checkout">
+            <button class="checkout-cta">Finalizar Compra</button>
+          </div>
+        </div>
+      </aside>
+
         <!-- ################################################################################################ -->
       <div class="clear"></div>
     </main>
