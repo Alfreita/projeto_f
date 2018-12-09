@@ -16,9 +16,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/index/carrinho',(req,res,next)=>{
     let user = dbuser.getUsuario();
-    res.render('carrinho.ejs',{
-        user
-    });
+   res.redirect('http://localhost:3000/pedido/ped');
 });
 
 router.get('/index', (req, res, next) => {
@@ -113,4 +111,10 @@ router.get('/cadastroproduto',(req,res)=>{
     res.render('cadastroProduto.ejs');
 });
 
+router.get('/sucesso',(req,res)=>{
+    let user = dbuser.getUsuario();
+    res.render('RealizadoComSucesso.ejs',{
+        user
+    });
+});
 module.exports = router;

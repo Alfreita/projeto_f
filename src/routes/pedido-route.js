@@ -8,6 +8,7 @@ const dbuser = require('../dbusuario')
 
 router.post('/:id',controller.post);
 router.get('/',controller.get);
+router.get('/ped',controller.getById);
 
 
 module.exports = router;
