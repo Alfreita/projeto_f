@@ -92,6 +92,11 @@ router.get('/product/:id', (req, res, next) => {
 router.get('/index/login',(req,res,next)=>{
     res.render('novoLogin.ejs');
 });
+
+router.get('/index/unautorized',(req,res,next)=>{
+    res.render('wrongUser.ejs');
+});
+
 router.get('/index/logout',(req,res,next)=>{
     let user = dbuser.getUsuario();
     dbuser.doLogout();

@@ -51,7 +51,8 @@ exports.doLogin = (req, res, next) => {
         senha: req.query.senha
     }).then(data => {
       if(data === null){
-        res.send('Acesso negado');
+        res.render('wrongUser.ejs');
+
       }else{
         const query = querystring.stringify({
             "nome":data.name,
